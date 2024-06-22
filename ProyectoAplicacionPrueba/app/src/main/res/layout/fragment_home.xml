@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zoologico"
+    android:backgroundTint="#3B0526FF"
+    android:backgroundTintMode="add"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -28,12 +30,33 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_dialog_email"
+        android:fallbackLineSpacing="false"
+        android:hapticFeedbackEnabled="true"
         android:text="Añadir animal"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintVertical_bias="0.883"
+        app:rippleColor="#C60202" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="322dp"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:backgroundTint="#88FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

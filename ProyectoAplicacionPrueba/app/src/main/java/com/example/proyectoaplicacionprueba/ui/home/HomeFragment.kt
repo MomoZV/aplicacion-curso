@@ -37,8 +37,12 @@ class HomeFragment : Fragment() {
         }
 
         var Boton = binding.button
+        var CapturadorTexto = binding.editTextText
         var contador = 0
-        val catalagoAnimales = arrayOf("Perro", "Gato", "Leon", "Jirafa", "Pajaro", "Tortuga")
+        //val catalagoAnimales = arrayOf("Perro", "Gato", "Leon", "Jirafa", "Pajaro", "Tortuga")
+        val catalagoAnimales = arrayOf("Perro", "Gato", "Leon")
+
+        val cantidadAnimales = arrayOf(0, 0, 0, 0, 0, 0)
         //val catalagoAnimales = arrayOf("Perro")
         var animalSeleccionado = 0
 
@@ -56,9 +60,19 @@ class HomeFragment : Fragment() {
                 textView.text = "El animal seleccionado fue " + catalagoAnimales[animalSeleccionado]
             */
 
+            /*
             animalSeleccionado = Random.nextInt(0, 6)
             textView.text = textView.text.toString() + catalagoAnimales[animalSeleccionado] + "\n"
+             */
 
+            /*
+            textView.text = textView.text.toString() + CapturadorTexto.text.toString() + "\n"
+            CapturadorTexto.text.clear()
+
+             */
+            animalSeleccionado = Random.nextInt(0, 3)
+            cantidadAnimales[animalSeleccionado] += 1
+            textView.text = "Lista animales\n Perro " + cantidadAnimales[0] + "\n Gato " + cantidadAnimales[1] + "\n Leon " + cantidadAnimales[2]
         }
         //////////////////////////////////////////////////////////////////////
 
